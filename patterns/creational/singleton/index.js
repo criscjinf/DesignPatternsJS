@@ -1,14 +1,19 @@
-const Singleton = require('./singleton');
+const SingletonConfigs = require('./singletonConfigs');
 
-function run() {
+const configs1 = SingletonConfigs.getInstance;
+const configs2 = SingletonConfigs.getInstance;
 
-    var instance1 = Singleton.getInstance();
-    var instance2 = Singleton.getInstance();
+configs2.load();
+console.log(configs1);
+console.log(configs2);
 
-    var instance3 = Singleton.createInstance();
+console.log(`É o mesmo objeto? ${configs1 === configs2}`);
 
-    console.log("Same instance(1 X 2)? " + (instance1 === instance2));
-    console.log("Same instance(2 X 3)? " + (instance3 === instance2));
-}
+console.log(`ID Loja config 1: ${configs1.id_loja}`);
 
-run()
+console.log('Mudando ID da Loja na config 2')
+configs2.id_loja = 20;
+
+console.log(`ID Loja config 1: ${configs1.id_loja}`);
+
+// var config3 = new SingletonConfigs()
