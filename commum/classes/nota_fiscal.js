@@ -1,10 +1,10 @@
-class Nfe {
-    constructor() {
-        this.numero = null;
-        this.serie = '';
-        this.cpfCli = '';
-        this.nomeCli = '';
-        this.valorTotal = null;
+class NotaFical {
+    constructor(dados) {
+        this.numero = dados['numero'] || null;
+        this.serie = dados['serie'] || '';
+        this.cpfCli = dados['cpfCli'] || '';
+        this.nomeCli = dados['nomeCli'] || '';
+        this.valorTotal = dados['valorTotal'] || null;
         this.items = []
     }
 
@@ -12,9 +12,14 @@ class Nfe {
         console.log("numero: " + this.numero,
             ", serie: " + this.serie);
     };
+
+    getTipoNota() {
+        return 'Nota base'
+    }
+
 };
 
-class ItemsNfe {
+class ItemNotaFiscal {
     constructor() {
         this.nItem = null;
         this.nDesc = '';
@@ -24,4 +29,4 @@ class ItemsNfe {
     }
 };
 
-module.exports = { Nfe, ItemsNfe };
+module.exports = { NotaFical, ItemNotaFiscal };
