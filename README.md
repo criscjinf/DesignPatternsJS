@@ -1,5 +1,12 @@
 # DesignPatternsJS
 Projeto exemplificando padrões de desenvolvimento utilizando JavaScript
+```
+Obs.:
+- A fim de isolar os padrões para facilitar o entendimento, foi criado em cada pasta de patterns um arquivo index.js implementando o exemplo de uso, que pode ser executado com o comando: "node index.js"
+
+- Na pasta commum estão as classes utilizadas nos exemplos de implementação
+```
+
 
 # Padrões criacionais
 
@@ -44,3 +51,14 @@ Projeto exemplificando padrões de desenvolvimento utilizando JavaScript
 >> Use o Abstract Factory quando seu código precisa trabalhar com diversas famílias de produtos relacionados, mas que você não quer depender de classes concretas daqueles produtos-eles podem ser desconhecidos de antemão ou você simplesmente quer permitir uma futura escalabilidade.
 >>
 >> O Abstract Factory fornece a você uma interface para a criação de objetos de cada classe das famílias de produtos. Desde que seu código crie objetos a partir dessa interface, você não precisará se preocupar em criar uma variante errada de um produto que não coincida com produtos já criados por sua aplicação.
+
+
+# Referências:
+
+- GAMMA, Eric; HELM, Richard; JOHNSON, Ralph; VLISSIDES, John. Design Patterns: Elements of Reusable Object-Oriented Software. Editora: Addison-Wesley Professional, 10/11/1994.
+
+- https://www.dofactory.com/javascript/design-patterns/factory-method
+
+- https://refactoring.guru/pt-br/design-patterns
+
+- https://medium.com/@thebabscraig/javascript-design-patterns-part-1-the-factory-pattern-5f135e881192
