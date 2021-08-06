@@ -1,4 +1,5 @@
-const { Nfe, ItemsNfe } = require('../../../commum/classes/nota_fiscal');
+const { ItemNotaFiscal } = require('../../../commum/classes/nota_fiscal');
+const Nfe = require("../../../commum/classes/nfe");
 const api = require('../../../commum/api/api');
 
 //Classe Builder - Responsável pela construção do Objeto em sí
@@ -23,7 +24,7 @@ class BuilderNFCe {
         let items = dados['items'];
         items.forEach(item => {
             let produto = api.getProduto(item["produto"])
-            let itemNfe = new ItemsNfe();
+            let itemNfe = new ItemNotaFiscal();
 
             itemNfe.nItem = produto["codigo"];
             itemNfe.nDesc = produto["descricao"];

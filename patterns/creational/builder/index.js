@@ -17,6 +17,7 @@ function EmitirNota() {
     }
 
     nfeEmissor.constructor(nfceBuilder, dados)
+    nfeEmissor.constructor(cfeSatBuilder, dados)
 }
 
 

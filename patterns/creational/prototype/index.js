@@ -1,5 +1,5 @@
 const NotaFiscalPrototype = require('./prototype');
-const { Nfe } = require('../../../commum/classes/nota_fiscal')
+const Nfe = require("../../../commum/classes/nfe");
 
 
 function run() {

@@ -1,11 +1,10 @@
-const { Nfe } = require('../../../commum/classes/nota_fiscal')
-
+const Nfe = require("../../../commum/classes/nfe");
 
 function NotaFiscalPrototype(proto) {
     this.proto = proto;
 
     this.clone = function () {
-        var nota = new Nfe();
+        let nota = new Nfe();
 
         nota.numero = proto.numero;
         nota.serie = proto.serie;

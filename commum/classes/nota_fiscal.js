@@ -1,10 +1,10 @@
 class NotaFical {
     constructor(dados) {
-        this.numero = dados['numero'] || null;
-        this.serie = dados['serie'] || '';
-        this.cpfCli = dados['cpfCli'] || '';
-        this.nomeCli = dados['nomeCli'] || '';
-        this.valorTotal = dados['valorTotal'] || null;
+        this.numero = dados ? dados['numero'] : null;
+        this.serie = dados ? dados['serie'] : '';
+        this.cpfCli = dados ? dados['cpfCli'] : '';
+        this.nomeCli = dados ? dados['nomeCli'] : '';
+        this.valorTotal = dados ? dados['valorTotal'] : null;
         this.items = []
     }
 
