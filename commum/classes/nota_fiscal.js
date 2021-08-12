@@ -1,4 +1,4 @@
-class NotaFical {
+class NotaFiscal {
     constructor(dados) {
         this.numero = dados ? dados['numero'] : null;
         this.serie = dados ? dados['serie'] : '';
@@ -29,4 +29,4 @@ class ItemNotaFiscal {
     }
 };
 
-module.exports = { NotaFical, ItemNotaFiscal };
+module.exports = { NotaFiscal, ItemNotaFiscal };

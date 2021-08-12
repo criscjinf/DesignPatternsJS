@@ -1,7 +1,7 @@
-const { NotaFical } = require('./nota_fiscal');
+const { NotaFiscal } = require('./nota_fiscal');
 
 
-class Nfe extends NotaFical {
+class Nfe extends NotaFiscal {
 
     getTipoNota() {
         return 'Nota Fiscal Eletrônica'
