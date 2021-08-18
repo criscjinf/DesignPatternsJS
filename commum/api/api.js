@@ -26,6 +26,16 @@ const api = (function () {
                 "icms": 17,
                 "valor": 8.90
             }
+        },
+
+        validateAccess(token) {
+            return token === 'asd654qwe321zxc987'
+        },
+
+        postLog(url, token, msg) {
+            if (this.validateAccess(token)) {
+                console.log(url, msg);
+            }
         }
     }
 })();
