@@ -70,6 +70,19 @@ Obs.:
  > ### Aplicabilidade
  >> Utilize o padrão Bridge quando você quer dividir e organizar uma classe monolítica que tem diversas variantes da mesma funcionalidade (por exemplo, se a classe pode trabalhar com diversos servidores de base de dados).
 
+ ## Composite
+ > O Composite é um padrão de projeto estrutural que permite que você componha objetos em estruturas de árvores e então trabalhe com essas estruturas como se elas fossem objetos individuais.
+ > ### Aplicabilidade
+ >>  Utilize o padrão Composite quando você tem que implementar uma estrutura de objetos tipo árvore.
+ >>
+ >>  Todos os elementos definidos pelo padrão Composite compartilham uma interface comum. Usando essa interface o cliente não precisa se preocupar com a classe concreta dos objetos com os quais está trabalhando.
+ ## Decorator
+ > O Decorator é utilizado para adicionar novas funcionalidades a uma classe, função ou componente sem a necessidade de altera-las.
+ > ### Aplicabilidade
+ >>  Utilize o padrão Decorator quando você precisa ser capaz de projetar comportamentos adicionais para objetos em tempo de execução sem quebrar o código que usa esses objetos.
+>>
+>> O Decorator lhe permite estruturar sua lógica de negócio em camadas, criar um decorador para cada camada, e compor objetos com várias combinações dessa lógica durante a execução. O código cliente pode tratar de todos esses objetos da mesma forma, como todos seguem a mesma interface comum.
+
 # Referências:
 
 - GAMMA, Eric; HELM, Richard; JOHNSON, Ralph; VLISSIDES, John. Design Patterns: Elements of Reusable Object-Oriented Software. Editora: Addison-Wesley Professional, 10/11/1994.
@@ -79,3 +92,5 @@ Obs.:
 - https://refactoring.guru/pt-br/design-patterns
 
 - https://medium.com/@thebabscraig/javascript-design-patterns-part-1-the-factory-pattern-5f135e881192
+
+- https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/ch09s14.html
