@@ -88,7 +88,15 @@ Obs.:
 >> Utilize o padrão Facade quando você precisa ter uma interface limitada mas simples para um subsistema complexo.
 >>
 >> Com o passar do tempo, subsistemas ficam mais complexos. Até mesmo aplicar padrões de projeto tipicamente leva a criação de mais classes. Um subsistema pode tornar-se mais flexível e mais fácil de se reutilizar em vários contextos, mas a quantidade de códigos padrão e de configuração que ele necessita de um cliente cresce cada vez mais. O Facade tenta consertar esse problema fornecendo um atalho para as funcionalidades mais usadas do subsistema que corresponde aos requerimentos do cliente.
-
+> ## Flyweight
+> O Flyweight é um padrão de projeto estrutural que permite a você colocar mais objetos na quantidade de RAM disponível ao compartilhar partes comuns de estado entre os múltiplos objetos ao invés de manter todos os dados em cada objeto.
+> ## Aplicabilidade
+>> Utilize o padrão Flyweight apenas quando seu programa deve suportar um grande número de objetos que mal cabem na RAM disponível.
+>>
+ >> O benefício de aplicar o padrão depende muito de como e onde ele é usado. Ele é mais útil quando:
+>>
+>> - Uma aplicação precisa gerar um grande número de objetos similares (isso drena a RAM disponível no dispositivo alvo)
+>> - Os objetos contém estados duplicados que podem ser extraídos e compartilhados entre múltiplos objetos
 # Referências:
 
 - GAMMA, Eric; HELM, Richard; JOHNSON, Ralph; VLISSIDES, John. Design Patterns: Elements of Reusable Object-Oriented Software. Editora: Addison-Wesley Professional, 10/11/1994.
