@@ -36,6 +36,10 @@ const api = (function () {
             if (this.validateAccess(token)) {
                 console.log(url, msg);
             }
+        },
+
+        getUserPermissionLevel(user) {
+            return user.loggedIn ? 1 : 0
         }
     }
 })();
