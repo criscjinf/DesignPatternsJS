@@ -8,7 +8,7 @@ class PublisherEventManager {
     }
 
     unregister(event, observer) {
-        this.observers[event].remove.filter(item => item !== observer)
+        this.observers[event] = this.observers[event].filter(item => item !== observer)
     }
 
     notifyEvent(event, value) {
