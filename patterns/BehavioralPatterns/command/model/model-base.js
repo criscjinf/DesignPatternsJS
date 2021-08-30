@@ -13,7 +13,7 @@ class ModelBase {
 
     upsert(data) {
         const idx = this.data.findIndex(item => item['id'] === data['id'])
-        idx > -1 ? this.data[idx] = data : this.create(data)
+        idx > -1 ? this.data[idx] = { ...data } : this.create({ ...data })
     }
 }
 
