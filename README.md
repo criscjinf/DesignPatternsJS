@@ -215,6 +215,21 @@ Obs.:
 >> ```
  >> A lista de inscrição é dinâmica, então assinantes podem entrar e sair da lista sempre que quiserem.
  >> ```
+## State
+> Permite que o objeto mude seu comportamento quando seu status interno é alterado. Irá parecer que a classe do objeto foi alterada
+> ### Aplicabilidade
+>> Utilize o padrão State quando você tem um objeto que se comporta de maneira diferente dependendo do seu estado atual, quando o número de estados é enorme, e quando o código estado específico muda com frequência.
+>> ```
+>> O padrão sugere que você extraia todo o código estado específico para um conjunto de classes distintas. Como resultado, você pode adicionar novos estados ou mudar os existentes independentemente uns dos outros, reduzindo o custo da manutenção.
+>> ```
+>> Utilize o padrão quando você tem uma classe populada com condicionais gigantes que alteram como a classe se comporta de acordo com os valores atuais dos campos da classe.
+>> ```
+>> O padrão State permite que você extraia ramificações dessas condicionais para dentro de métodos de classes correspondentes. Ao fazer isso, você também limpa para fora da classe principal os campos temporários e os métodos auxiliares envolvidos no código estado específico.
+>> ```
+>> Utilize o State quando você tem muito código duplicado em muitos estados parecidos e transições de uma máquina de estado baseada em condições.
+>> ```
+>> O padrão State permite que você componha hierarquias de classes estado e reduza a duplicação ao extrair código comum para dentro de classes abstratas base.
+>> ```
  # Referências:
 
 - GAMMA, Eric; HELM, Richard; JOHNSON, Ralph; VLISSIDES, John. Design Patterns: Elements of Reusable Object-Oriented Software. Editora: Addison-Wesley Professional, 10/11/1994.
