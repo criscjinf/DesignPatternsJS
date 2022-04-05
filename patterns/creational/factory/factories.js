@@ -1,15 +1,30 @@
-const Cfe = require("../../../commum/classes/cfe");
-const Nfe = require("../../../commum/classes/nfe");
+const RegraTributariaRJ = require("./tributos/regra-tributaria-rj")
+const RegraTributariaRS = require("./tributos/regra-tributaria-rs")
+const RegraTributariaSC = require("./tributos/regra-tributaria-sc")
 
-const tipoNota = { Nfe, Cfe }
+
+const regrasTributarias = { RegraTributariaRJ, RegraTributariaRS, RegraTributariaSC }
 
 // Class seguindo o Pattern Factory
-const factoryNotas = new function () {
-    this.criarNota = function (tipo, dados) {
-        const ClasseNota = tipoNota[tipo]
+class FactoryNotas {
+    static calculaIcms(nota) {
+        return Math.round(nota.valor * nota.aliquotaIcms) /100
+    }
+    
+    static criarNota = (dados) => {
+        const ClasseRegras = regrasTributarias[`RegraTributaria${dados.uf}`]
+        const regrasUF = new ClasseRegras()
+        const nota = {...dados}
 
-        return new ClasseNota(dados)
+        nota.aliquotaIcms = regrasUF.aliquotaIcms()
+        nota.icms = FactoryNotas.calculaIcms(nota)
+
+        if (regrasUF.obrigarInformarCPF(dados) && (!dados.cpf)) {
+            throw new Error(`Nota fiscal com valor muito elevado para o estado de ${dados.uf}. Obrigatório informar o CPF.`)
+        }
+
+        return nota
     }
 }
 
-module.exports = factoryNotas;
+module.exports = FactoryNotas;

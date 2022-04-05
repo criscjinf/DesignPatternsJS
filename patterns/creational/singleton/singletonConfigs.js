@@ -11,7 +11,7 @@ class SingletonConfigs {
     }
 
     load() {
-        this.url = 'http://conta.saipos.com.br';
+        this.url = 'http://conta.orangejuice.com.br';
         this.id_loja = 18;
         console.log('Carregou dados');
     }

@@ -1,15 +1,17 @@
-const factoryNotas = require('./factories')
+const FactoryNotas = require('./factories')
 
 const params = {
     numero: 123,
     serie: 'A',
     cpfCli: '999.999.999-99',
     nomeCli: 'Allen',
-    valorTotal: 20.98,
+    valor: 10000,
+    uf: 'RS'
 }
 
-const nfe = factoryNotas.criarNota("Nfe", params);
-const cfe = factoryNotas.criarNota("Cfe", params);
+const nota1 = FactoryNotas.criarNota(params);
+console.log(`${nota1.uf}: `, nota1)
 
-console.log(nfe.getTipoNota())
-console.log(cfe.getTipoNota())
+params.uf = 'SC'
+const nota2 = FactoryNotas.criarNota(params);
+console.log(`${nota2.uf}: `, nota2)
